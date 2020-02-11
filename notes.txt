@@ -1,0 +1,19 @@
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+  return res.json({
+      message:'ola',
+      message2:'mundo'
+  })
+});
+
+app.listen(3636);
+
+console.log("Server iniciado");
+
+
+-----------
+
+query params = req.query.nome   //// ?nome=valor
+route params = req.params.id;  /rota/:id   --- o valor apos os dois pontos e o params.valor devem ser iguais
